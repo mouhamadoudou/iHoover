@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="input_text" type="text" data-length="10" [(ngModel)]="Dimension" required name="dimension" type="text" #dimension="ngModel">
+              <label for="input_text">Dimension (exemple : 10 10)</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <textarea id="textarea2" class="materialize-textarea" [(ngModel)]="Position" name="Position" type="text"  data-length="10"></textarea>
+              <label for="textarea2">Position (exemple: 5 5 N) </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <textarea id="textarea2" class="materialize-textarea" [(ngModel)]="Instructions" name="Instructions" type="text"  data-length="10"></textarea>
+              <label for="textarea2">Instructions (exemple: DADADADAA)</label>
+            </div>
+          </div>
+        </form>
+        <button (click)="check_input()" class="btn waves-effect waves-light marg" type="submit" name="action">Start
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+    <h5> {{ get_result() }} </h5>
+  </div>
+        
